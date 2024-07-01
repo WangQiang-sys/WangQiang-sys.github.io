@@ -1,5 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+  <title>Password Protected Page</title>
+</head>
+<body>
+  <div id="content" style="display: none;">
+    <h1>Welcome to my protected page!</h1>
+    <p>This content is password protected.</p>
+  </div>
+
+  <div id="passwordPrompt">
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      var correctPassword = "yourpassword"; // 设置你的密码
+
+      if (password === correctPassword) {
+        document.getElementById("passwordPrompt").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+  </script>
+</body>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
