@@ -10,14 +10,21 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            width: 100vw;
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
         }
-        #password-form {
+        #container {
+            width: 100%;
+            height: 100%;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+        }
+        #password-form, #protected-content {
+            width: 100%;
+            max-width: 800px;
             background-color: #fff;
             padding: 20px;
             border: 1px solid #ccc;
@@ -29,6 +36,7 @@
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            width: calc(100% - 16px);
         }
         button {
             padding: 8px 16px;
@@ -37,32 +45,36 @@
             background-color: #007bff;
             color: #fff;
             cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
             background-color: #0056b3;
         }
-        #protected-content {
-            display: none;
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+        h1 {
+            font-size: 24px;
         }
-        h1, h2, h3, p {
-            margin: 12px 0;
+        h2 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        p {
+            font-size: 16px;
         }
         ul {
             list-style-type: none;
             padding: 0;
+            font-size: 14px;
         }
         li {
-            margin: 6px 0;
+            margin: 8px 0;
+            font-size: 14px;
         }
         a {
             text-decoration: none;
             color: #007bff;
+            font-size: 14px;
         }
         a:hover {
             text-decoration: underline;
@@ -70,28 +82,30 @@
     </style>
 </head>
 <body>
-    <div id="password-form">
-        <input type="password" id="password-input" placeholder="Enter password">
-        <button onclick="checkPassword()">Submit</button>
-    </div>
-    <div id="protected-content">
-        <h1>Table of Contents</h1>
-        
-        <h2>Chapter 1: 实验过程中本底与束流的时间分配</h2>
-        
-        <ul>
-            <li><a href="Source + backround.html">Source + background</a></li>
-            <!-- Add more items to the table of contents as needed -->
-        </ul>
-        
-        <h2>Chapter 2: Detailed Information</h2>
-        <p>This section contains detailed information that is only accessible to users with the correct password.</p>
-        
-        <h3>Section 2.1: Subsection</h3>
-        <p>Details about subsection 2.1.</p>
+    <div id="container">
+        <div id="password-form">
+            <input type="password" id="password-input" placeholder="Enter password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="protected-content">
+            <h1>Table of Contents</h1>
+            
+            <h2>Chapter 1: Introduction</h2>
+            
+            <ul>
+                <li><a href="Source + backround.html">Source + background</a></li>
+                <!-- Add more items to the table of contents as needed -->
+            </ul>
 
-        <h2>Chapter 3: Conclusion</h2>
-        <p>This is the conclusion of the protected content. Summarize the key points and provide any final thoughts.</p>
+            <h2>Chapter 2: Detailed Information</h2>
+            <p>This section contains detailed information that is only accessible to users with the correct password.</p>
+            
+            <h3>Section 2.1: Subsection</h3>
+            <p>Details about subsection 2.1.</p>
+
+            <h2>Chapter 3: Conclusion</h2>
+            <p>This is the conclusion of the protected content. Summarize the key points and provide any final thoughts.</p>
+        </div>
     </div>
     <script>
         function checkPassword() {
