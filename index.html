@@ -79,6 +79,14 @@
         a:hover {
             text-decoration: underline;
         }
+        .pdf-container {
+            margin-top: 20px;
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -94,7 +102,11 @@
         
         <ul>
             <li><a href="Source + backround.html">Source + background</a></li>
-            <li><iframe src="111.pdf">111</iframe></li>
+            <li><a href="111.pdf" target="_blank">刻度</a>
+               <div class="pdf-container">
+                    <embed src="51V(p,n)刻度.pdf" type="application/pdf" width="100%" height="100%">
+                </div>
+            </li>
             <!-- Add more items to the table of contents as needed -->
         </ul>
 
