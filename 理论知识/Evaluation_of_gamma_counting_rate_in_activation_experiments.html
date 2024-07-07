@@ -116,7 +116,9 @@
                 var etw = Math.exp(0.693 * tw / HalfLife);
 
                 // 使用 math.js 库计算复杂公式
-                var expression = `(3600 * 6.023 * ${CurrentIntensity} * ${TargetThickness} * ${CrossSection} * ${GammaBranching} * ${GammaEfficiency} * ${etc} * ${eti}) / (1.6 * ${ChargeNumber} * ${MassNumber} * 0.693 * ${ti} * ${etw} / ${HalfLife})`;
+                var expression = `(${ti} * 3600 * 6.023 * ${CurrentIntensity} * ${TargetThickness} * ${CrossSection}\
+                * ${GammaBranching} * ${GammaEfficiency} * ${etc} * ${eti}) / \
+                (1.6 * ${ChargeNumber} * ${MassNumber} * 0.693 * ${ti} * ${etw} / ${HalfLife})`;
                 var result = math.evaluate(expression);
 
                 // 显示结果
