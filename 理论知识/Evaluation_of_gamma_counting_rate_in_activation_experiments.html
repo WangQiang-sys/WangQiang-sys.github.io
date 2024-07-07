@@ -111,15 +111,11 @@
                 var tw = parseFloat(document.getElementById('tw').value);
                 var tc = parseFloat(document.getElementById('tc').value);
                 var ti = parseFloat(document.getElementById('ti').value);
-                var ln2 = Math.LN2;
-                var etc = 1 - Math.exp(-ln2*tc/HalfLife);
-                var eti = 1 - Math.exp(-ln2*ti/HalfLife);
-                var etw = Math.exp(ln2*tw/HalfLife);
 
                 // 使用 math.js 库计算复杂公式
                 var expression = `(3600 * 6.023 * ${CurrentIntensity} * ${TargetThickness} * ${CrossSection}\
-                * ${GammaBranching} * ${GammaEfficiency} * ${etc} * ${eti}) /\
-                ((1.6 * ${ChargeNumber} * ${MassNumber} * ${etw} * ${ln2} * ${ti} )/ ${HalfLife})`;
+                * ${GammaBranching} * ${GammaEfficiency} * (1 - Math.exp(-0.693 * ${tc} / ${HalfLife})) * (1 - Math.exp(-0.693 * ${ti} / ${HalfLife}))) /\
+                ((1.6 * ${ChargeNumber} * ${MassNumber} * Math.exp(0.693 * ${tw} / ${HalfLife}) * 0.693 * ${ti} )/ ${HalfLife})`;
                 var result = math.evaluate(expression);
 
                 // 显示结果
