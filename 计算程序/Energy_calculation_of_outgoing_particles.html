@@ -6,9 +6,11 @@
         body {
             font-family: Arial, sans-serif;
             margin: 50px;
+            max-width: 800px; /* 更改页面最大宽度 */
+            margin: auto; /* 居中页面 */
         }
         .calculator {
-            max-width: 300px;
+            max-width: 600px; /* 增加计算器的最大宽度 */
             margin: auto;
         }
          h2 {
@@ -99,7 +101,7 @@
                 var Q = parseFloat(document.getElementById('Q').value);
 
                 // 使用 math.js 库计算复杂公式
-                var expression = `(${B}-${a}) * ${Ea}/(${B}+${b})+${B} * Q / (${B}+${a})`;
+                var expression = `(${B}-${a}) * ${Ea}/(${B}+${b})+${B} *${Q} / (${B}+${a})`;
                 var result = math.evaluate(expression);
 
                 // 显示结果
