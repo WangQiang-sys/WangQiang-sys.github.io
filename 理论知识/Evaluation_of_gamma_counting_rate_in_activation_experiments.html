@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>反应率计算器</title>
+    <title>gamma计数评估计算器</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,7 +53,7 @@
 </head>
 <body>
     <div class="calculator">
-        <h2>反应率计算器</h2>
+        <h2>gamma计数评估计算器</h2>
         <hr> <!-- 添加横线 -->
         <h3>输入参数</h3>
         <label for="CurrentIntensity">流强(nA):</label>
@@ -117,8 +117,8 @@
                 var etw = Math.exp(ln2*tw/HalfLife);
 
                 // 使用 math.js 库计算复杂公式
-                var expression = `3600 * 6.023 * ${CurrentIntensity} * ${TargetThickness} * ${CrossSection}\
-                * ${GammaBranching} * ${GammaEfficiency} * ${etc} * ${eti} /\
+                var expression = `(3600 * 6.023 * ${CurrentIntensity} * ${TargetThickness} * ${CrossSection}\
+                * ${GammaBranching} * ${GammaEfficiency} * ${etc} * ${eti}) /\
                 (1.6 * ${ChargeNumber} * ${MassNumber} * ${etw} * ${ln2} * ${ti} / ${HalfLife})`;
                 var result = math.evaluate(expression);
 
