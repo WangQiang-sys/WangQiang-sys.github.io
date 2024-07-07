@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>出射粒子能量计算器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .calculator {
+            max-width: 300px;
+            margin: auto;
+        }
+         h2 {
+            font-size: 30px; /* 更改字体大小 */
+            font-family: '黑体', Arial, sans-serif; /* 设置为黑体 */
+            font-weight: bold; /* 加粗 */
+            text-align: center; /* 文本居中 */
+            margin-bottom: 10px; /* 添加一些下边距 */
+        }
+         hr {
+            border: none;
+            border-top: 1px solid #ccc; /* 横线样式 */
+            margin: 10px 0; /* 设置上下边距 */
+        }
+         h3 {
+            font-size: 20px; /* 更改字体大小 */
+            text-align: center; /* 文本居中 */
+            margin-bottom: 10px; /* 添加一些下边距 */
+        }
+       h4 {
+            font-size: 16px; /* 更改字体大小 */
+            margin-bottom: 10px; /* 添加一些下边距 */
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>出射粒子能量计算器</h2>
+        <h4>本程序默认出射粒子方向为90度，即cosθ=0。</h4>
+        <h4>温馨提示：51V(p,n)51Cr的Q值为-1535 keV。</h4>
+        <hr> <!-- 添加横线 -->
+        <h3>输入参数</h3>
+        <label for="a">入射粒子质量数:</label>
+        <input type="number" id="a" placeholder="输入入射粒子质量数" step="1">
+        
+        <label for="A">靶核质量数:</label>
+        <input type="number" id="A" placeholder="输入靶核质量数" step="1">
+
+        <label for="Ea">入射粒子能量(keV):</label>
+        <input type="number" id="Ea" placeholder="输入入射粒子能量" step="1">
+
+        <label for="b">出射粒子质量数:</label>
+        <input type="number" id="b" placeholder="输入出射粒子质量数" step="1">
+
+        <label for="B">反冲核质量数:</label>
+        <input type="number" id="B" placeholder="输入反冲核质量数" step="1">
+
+        <label for="Q">反应Q值(keV):</label>
+        <input type="number" id="Q" placeholder="输入反应Q值" step="0.01">
+
+       
+        <hr> <!-- 添加横线 -->
+        <button onclick="calculate()">计算</button>
+        <hr> <!-- 添加横线 -->
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            try {
+                // 获取用户输入的变量值
+                var a = parseFloat(document.getElementById('a').value);
+                var A = parseFloat(document.getElementById('A').value);
+                var Ea = parseFloat(document.getElementById('Ea').value);
+                var b = parseFloat(document.getElementById('b').value);
+                var B = parseFloat(document.getElementById('B').value);
+                var Q = parseFloat(document.getElementById('Q').value);
+
+                // 使用 math.js 库计算复杂公式
+                var expression = `(${B}-${a}) * ${Ea}/(${B}+${b})+${B} * Q / (${B}+${a})`;
+                var result = math.evaluate(expression);
+
+                // 显示结果
+                document.getElementById('result').innerText = "出射粒子b的能量(keV): " + result.toFixed(2);
+            } catch (error) {
+                // 如果表达式无效，显示错误信息
+                document.getElementById('result').innerText = "错误: " + error.message;
+            }
+        }
+    </script>
+    <!-- 引入 Math.js 库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.2/math.min.js"></script>
+</body>
+</html>
