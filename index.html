@@ -9,12 +9,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* 修改为100vh以适应全屏 */
+            min-height: 100vh;
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
-            padding: 0; /* 添加padding: 0; */
-            box-sizing: border-box; /* 添加全局box-sizing */
+            padding: 0;
+            box-sizing: border-box;
         }
         #password-form, #protected-content {
             display: flex;
@@ -25,16 +25,17 @@
             border: 1px solid #ccc;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 1000px;
-            width: 100%;
-            box-sizing: border-box; /* 确保padding不会影响宽度 */
+            box-sizing: border-box;
+        }
+        #password-form {
+            width: 300px; /* 设置较小宽度 */
         }
         #password-input {
             margin-bottom: 10px;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            width: 100%; /* 确保输入框宽度为100% */
+            width: 100%;
             box-sizing: border-box;
         }
         button {
@@ -50,6 +51,8 @@
         }
         #protected-content {
             display: none;
+            width: 90%; /* 设置宽度为90% */
+            max-width: 1200px; /* 设置最大宽度 */
         }
         h1, h2, h3, p, ul, li, a {
             margin: 0;
