@@ -11,6 +11,11 @@
             max-width: 300px;
             margin: auto;
         }
+         h2 {
+            font-size: 30px; /* 更改字体大小 */
+            font-family: '黑体', Arial, sans-serif; /* 设置为黑体 */
+            font-weight: bold; /* 加粗 */
+        }
         input[type="number"] {
             width: 100%;
             padding: 10px;
@@ -72,7 +77,7 @@
                 var result = math.evaluate(expression);
 
                 // 显示结果
-                document.getElementById('result').innerText = "结果: " + result.toFixed(2);
+                document.getElementById('result').innerText = "反应率: " + result.toFixed(2);
             } catch (error) {
                 // 如果表达式无效，显示错误信息
                 document.getElementById('result').innerText = "错误: " + error.message;
