@@ -113,7 +113,7 @@
                 var ti = parseFloat(document.getElementById('ti').value);
 
                 // 使用 math.js 库计算复杂公式
-                var expression = `1+1`;
+                var expression = `6.023 * ${CurrentIntensity} * ${TargetThickness} * ${CrossSection} / (1.6 * ${ChargeNumber} * ${MassNumber})`;
                 var result = math.evaluate(expression);
 
                 // 显示结果
