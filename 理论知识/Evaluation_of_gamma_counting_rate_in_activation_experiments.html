@@ -111,7 +111,7 @@
                 var tw = parseFloat(document.getElementById('tw').value);
                 var tc = parseFloat(document.getElementById('tc').value);
                 var ti = parseFloat(document.getElementById('ti').value);
-                var ln2 = Math.log(2);
+                var ln2 = Math.LN2;
                 var etc = 1 - Math.exp(-ln2*tc/HalfLife);
                 var eti = 1 - Math.exp(-ln2*ti/HalfLife);
                 var etw = Math.exp(ln2*tw/HalfLife);
