@@ -119,7 +119,7 @@
                 // 使用 math.js 库计算复杂公式
                 var expression = `(3600 * 6.023 * ${CurrentIntensity} * ${TargetThickness} * ${CrossSection}\
                 * ${GammaBranching} * ${GammaEfficiency} * ${etc} * ${eti}) /\
-                (1.6 * ${ChargeNumber} * ${MassNumber} * ${etw} * ${ln2} * ${ti} / ${HalfLife})`;
+                ((1.6 * ${ChargeNumber} * ${MassNumber} * ${etw} * ${ln2} * ${ti} )/ ${HalfLife})`;
                 var result = math.evaluate(expression);
 
                 // 显示结果
