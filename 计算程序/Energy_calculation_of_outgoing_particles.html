@@ -34,6 +34,20 @@
             font-size: 16px; /* 更改字体大小 */
             margin-bottom: 10px; /* 添加一些下边距 */
         }
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .input-row label {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .input-row input {
+            flex: 1;
+            padding: 10px;
+            margin-left: 10px;
+        }
         input[type="number"] {
             width: 100%;
             padding: 10px;
@@ -64,25 +78,28 @@
         <h4>温馨提示：51V(p,n)51Cr的Q值为-1535 keV。</h4>
         <hr> <!-- 添加横线 -->
         <h3>输入参数</h3>
-        <label for="a">入射粒子质量数:</label>
-        <input type="number" id="a" placeholder="输入入射粒子质量数" step="1">
         
-        <label for="A">靶核质量数:</label>
-        <input type="number" id="A" placeholder="输入靶核质量数" step="1">
+        <div class="input-row">
+            <label for="a">入射粒子质量数:</label>
+            <input type="number" id="a" placeholder="输入入射粒子质量数" step="1">
+            <label for="A">靶核质量数:</label>
+            <input type="number" id="A" placeholder="输入靶核质量数" step="1">
+        </div>
 
-        <label for="Ea">入射粒子能量(keV):</label>
-        <input type="number" id="Ea" placeholder="输入入射粒子能量" step="1">
+        <div class="input-row">
+            <label for="b">出射粒子质量数:</label>
+            <input type="number" id="b" placeholder="输入出射粒子质量数" step="1">
+            <label for="B">反冲核质量数:</label>
+            <input type="number" id="B" placeholder="输入反冲核质量数" step="1">
+        </div> 
 
-        <label for="b">出射粒子质量数:</label>
-        <input type="number" id="b" placeholder="输入出射粒子质量数" step="1">
-
-        <label for="B">反冲核质量数:</label>
-        <input type="number" id="B" placeholder="输入反冲核质量数" step="1">
-
-        <label for="Q">反应Q值(keV):</label>
-        <input type="number" id="Q" placeholder="输入反应Q值" step="0.01">
-
-       
+         <div class="input-row">
+              <label for="Ea">入射粒子能量(keV):</label>
+              <input type="number" id="Ea" placeholder="输入入射粒子能量" step="1">
+              <label for="Q">反应Q值(keV):</label>
+              <input type="number" id="Q" placeholder="输入反应Q值" step="0.01">
+        </div>
+                 
         <hr> <!-- 添加横线 -->
         <button onclick="calculate()">计算</button>
         <hr> <!-- 添加横线 -->
