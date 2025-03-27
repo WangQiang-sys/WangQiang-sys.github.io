@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HPGe程序合集</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>未命名</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14602,7 +14602,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>--将代码复制到linux环境中以.c后缀命名。运行命令 root -l -q spe_to_root.c"("2503run0001.Spe")"。</p>
+<p>将代码复制到linux环境中以.c后缀命名。运行命令 root -l -q spe_to_root.c"("2503run0001.Spe")"。</p>
 
 </div>
 </div>
@@ -14706,7 +14706,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>--需要与Scale_par.txt文件结合使用。通过拟合特征峰获得root直方图的刻度系数，需要在Scale_par.txt文件的第四行输入文件名，特征峰的数量可以任意选择，但是要以第7行开始，并以wqlovezhy行结束。此处对峰进行高斯拟合，只能获得准确的峰位信息。</p>
+<p>需要与Scale_par.txt文件结合使用。通过拟合特征峰获得root直方图的刻度系数，需要在Scale_par.txt文件的第四行输入文件名，特征峰的数量可以任意选择，但是要以第7行开始，并以wqlovezhy行结束。此处对峰进行高斯拟合，只能获得准确的峰位信息。</p>
 
 </div>
 </div>
@@ -14754,7 +14754,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>--将下面代码复制到linux环境中以.c后缀命名。运行令名 root -l Scale_par.c</p>
+<p>将下面代码复制到linux环境中以.c后缀命名。运行令名 root -l Scale_par.c</p>
 
 </div>
 </div>
@@ -15044,6 +15044,29 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%88%BB%E5%BA%A6root%E6%96%87%E4%BB%B6%E7%A8%8B%E5%BA%8F">&#21051;&#24230;root&#25991;&#20214;&#31243;&#24207;<a class="anchor-link" href="#%E5%88%BB%E5%BA%A6root%E6%96%87%E4%BB%B6%E7%A8%8B%E5%BA%8F">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>注意需要更改程序中的刻度系数。将下面代码复制到linux环境中以.c后缀命名。运行令名 root -l -q "scale_root.c("2503run$run_number.root")"</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15052,7 +15075,100 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span>
+<div class=" highlight hl-c++"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">scale_root</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.572656</span><span class="p">;</span><span class="w">    </span><span class="c1">// 常数项</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.175388</span><span class="p">;</span><span class="w">     </span><span class="c1">// 一次项</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">            </span><span class="c1">// 二次项</span>
+
+<span class="w">    </span><span class="c1">// 定义输入文件夹路径</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">inputFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"HPGeroot/"</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// string outputFolder = "coarsescaleHPGeroot/";</span>
+
+<span class="w">    </span><span class="c1">// 构建完整的输入文件路径</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">inputFilePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFolder</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 打开 ROOT 文件 (确保使用 UPDATE 模式)</span>
+<span class="w">    </span><span class="n">TFile</span><span class="o">*</span><span class="w"> </span><span class="n">ipf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TFile</span><span class="p">(</span><span class="n">inputFilePath</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="s">"UPDATE"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">ipf</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">IsZombie</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: Could not open file "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">inputFilePath</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 处理文件名：去掉扩展名和前四位</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">lastDot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">.</span><span class="n">find_last_of</span><span class="p">(</span><span class="sc">'.'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找到扩展名的位置</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lastDot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: File name has no extension."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">baseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">lastDot</span><span class="p">);</span><span class="w"> </span><span class="c1">// 去掉扩展名</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baseName</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">baseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseName</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// 去掉前四位</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: File name is too short to remove the first 4 characters."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 生成直方图名称</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"h"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">baseName</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 获取 TH1F 直方图</span>
+<span class="w">    </span><span class="n">TH1F</span><span class="o">*</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">TH1F</span><span class="o">*</span><span class="p">)</span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">(</span><span class="n">histName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: Could not find TH1F histogram with name "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" in the file."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">TRandom3</span><span class="w"> </span><span class="o">*</span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TRandom3</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Nbins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">GetNbins</span><span class="p">();</span><span class="w"> </span><span class="c1">// h0为未刻度的gamma谱</span>
+
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">newHistName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"_scale"</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">TH1F</span><span class="o">*</span><span class="w"> </span><span class="n">h1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TH1F</span><span class="p">(</span><span class="n">newHistName</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="n">newHistName</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="n">round</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Nbins</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Nbins</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Nbins</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">round</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Nbins</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Nbins</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Nbins</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// cout &lt;&lt; round(a + b * Nbins + c * Nbins * Nbins + 0.5) * 2 &lt;&lt; endl;</span>
+
+<span class="w">    </span><span class="c1">// 进行刻度操作</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Nbins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Long64_t</span><span class="w"> </span><span class="n">chN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">GetBinContent</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"> </span><span class="c1">// GetBinContent()提取每个bin的计数</span>
+<span class="w">        </span><span class="n">Double_t</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">GetBinLowEdge</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">  </span><span class="c1">// GetBinLowEdge()提取每个bin左边界的横坐标x</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Long64_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">chN</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">Double_t</span><span class="w"> </span><span class="n">cha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">-&gt;</span><span class="n">Uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span>
+<span class="w">            </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cha</span><span class="p">;</span><span class="w"> </span>
+<span class="w">            </span><span class="n">h1</span><span class="o">-&gt;</span><span class="n">Fill</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">cd</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 删除原始直方图</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Delete</span><span class="p">((</span><span class="n">histName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">";*"</span><span class="p">).</span><span class="n">c_str</span><span class="p">());</span><span class="w"> </span><span class="c1">// 删除 histName 及其所有关联对象</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Deleted "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" histogram."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" histogram not found."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">     </span><span class="c1">// 重命名缩放后的直方图</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">h1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">h1</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="n">histName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"> </span><span class="c1">// 重命名为 histName</span>
+<span class="w">        </span><span class="n">h1</span><span class="o">-&gt;</span><span class="n">SetTitle</span><span class="p">(</span><span class="n">histName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"> </span><span class="c1">// 修改标题为 histName</span>
+<span class="w">        </span><span class="n">h1</span><span class="o">-&gt;</span><span class="n">Write</span><span class="p">();</span><span class="w"> </span><span class="c1">// 写入文件</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Renamed "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">newHistName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" to "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">newHistName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" histogram not found."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 关闭文件</span>
+<span class="w">    </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"ROOT 文件已成功更新并保存到: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">inputFilePath</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 
      </div>
@@ -15060,6 +15176,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AF%BB%E5%B3%B0%E7%A8%8B%E5%BA%8F">&#23547;&#23792;&#31243;&#24207;<a class="anchor-link" href="#%E5%AF%BB%E5%B3%B0%E7%A8%8B%E5%BA%8F">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15068,7 +15195,483 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span>
+<div class=" highlight hl-c++"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">peaks_position</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">Double_t</span><span class="w"> </span><span class="n">threshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">backgroundSubtraction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 定义输入文件夹路径</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">inputFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"HPGeroot/"</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 构建完整的输入文件路径</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">inputFilePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFolder</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 打开 ROOT 文件</span>
+<span class="w">    </span><span class="n">TFile</span><span class="o">*</span><span class="w"> </span><span class="n">inputFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TFile</span><span class="p">(</span><span class="n">inputFilePath</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="s">"READ"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">inputFile</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">inputFile</span><span class="o">-&gt;</span><span class="n">IsZombie</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: Could not open file "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">inputFilePath</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 处理文件名：去掉扩展名和前四位</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">lastDot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">.</span><span class="n">find_last_of</span><span class="p">(</span><span class="sc">'.'</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lastDot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: File name has no extension."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">inputFile</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">baseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">lastDot</span><span class="p">);</span><span class="w"> </span><span class="c1">// 去掉扩展名</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baseName</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">baseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseName</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// 去掉前四位</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: File name is too short to remove the first 4 characters."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">inputFile</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 生成直方图名称</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"h"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">baseName</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 获取 TH1F 直方图</span>
+<span class="w">    </span><span class="n">TH1F</span><span class="o">*</span><span class="w"> </span><span class="n">histogram</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">TH1F</span><span class="o">*</span><span class="p">)</span><span class="n">inputFile</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">(</span><span class="n">histName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">histogram</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: Could not find TH1F histogram with name "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" in the file."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">inputFile</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 去掉统计框</span>
+<span class="w">    </span><span class="n">histogram</span><span class="o">-&gt;</span><span class="n">SetStats</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 设置横轴标题和单位</span>
+<span class="w">    </span><span class="n">histogram</span><span class="o">-&gt;</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetTitle</span><span class="p">(</span><span class="s">"Energy [keV]"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">histogram</span><span class="o">-&gt;</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">CenterTitle</span><span class="p">();</span><span class="w">  </span><span class="c1">// 横轴标题居中</span>
+
+<span class="w">    </span><span class="c1">// 设置纵轴标题</span>
+<span class="w">    </span><span class="n">histogram</span><span class="o">-&gt;</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetTitle</span><span class="p">(</span><span class="s">"Counts"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">histogram</span><span class="o">-&gt;</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">CenterTitle</span><span class="p">();</span><span class="w">  </span><span class="c1">// 纵轴标题居中</span>
+
+<span class="w">    </span><span class="c1">// 设置 X 轴显示范围</span>
+<span class="w">    </span><span class="c1">// histogram-&gt;GetXaxis()-&gt;SetRangeUser(200, 1600); // xMin 和 xMax 是你想要的范围</span>
+<span class="w">    </span><span class="c1">// // 设置 Y 轴显示范围（可选）</span>
+<span class="w">    </span><span class="c1">// histogram-&gt;GetYaxis()-&gt;SetRangeUser(0, 30000); // yMin 和 yMax 是你想要的范围</span>
+
+<span class="w">    </span><span class="c1">// 初始化变量</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Double_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">peaks</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">TH1F</span><span class="o">*</span><span class="w"> </span><span class="n">backgroundHistogram</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Int_t</span><span class="w"> </span><span class="n">numberOfPeaksFound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Double_t</span><span class="w"> </span><span class="o">*</span><span class="n">peakPositionsX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Double_t</span><span class="w"> </span><span class="o">*</span><span class="n">peakPositionsY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">TSpectrum</span><span class="w"> </span><span class="o">*</span><span class="n">spectrumAnalyzer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TSpectrum</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 清空 peaks 向量</span>
+<span class="w">    </span><span class="n">peaks</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 用于排序的 multimap，key: ypeaks, value: xpeaks</span>
+<span class="w">    </span><span class="n">multimap</span><span class="o">&lt;</span><span class="n">Int_t</span><span class="p">,</span><span class="w"> </span><span class="n">Double_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">peakMap</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 背景扣除</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">backgroundSubtraction</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">backgroundHistogram</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">TH1F</span><span class="o">*</span><span class="p">)</span><span class="n">spectrumAnalyzer</span><span class="o">-&gt;</span><span class="n">Background</span><span class="p">(</span><span class="n">histogram</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="s">"same"</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">histogram</span><span class="o">-&gt;</span><span class="n">Add</span><span class="p">(</span><span class="n">histogram</span><span class="p">,</span><span class="w"> </span><span class="n">backgroundHistogram</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 寻找峰</span>
+<span class="w">    </span><span class="n">numberOfPeaksFound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spectrumAnalyzer</span><span class="o">-&gt;</span><span class="n">Search</span><span class="p">(</span><span class="n">histogram</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">""</span><span class="p">,</span><span class="w"> </span><span class="n">threshold</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 标记峰</span>
+<span class="w">    </span><span class="n">TPolyMarker</span><span class="o">*</span><span class="w"> </span><span class="n">peakMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">TPolyMarker</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">histogram</span><span class="o">-&gt;</span><span class="n">GetListOfFunctions</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">FindObject</span><span class="p">(</span><span class="s">"TPolyMarker"</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">peakMarker</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">peakMarker</span><span class="o">-&gt;</span><span class="n">SetMarkerStyle</span><span class="p">(</span><span class="mi">32</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">peakMarker</span><span class="o">-&gt;</span><span class="n">SetMarkerColor</span><span class="p">(</span><span class="n">kGreen</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">peakMarker</span><span class="o">-&gt;</span><span class="n">SetMarkerSize</span><span class="p">(</span><span class="mf">0.4</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 获取峰的位置</span>
+<span class="w">    </span><span class="n">peakPositionsX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spectrumAnalyzer</span><span class="o">-&gt;</span><span class="n">GetPositionX</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">peakPositionsY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spectrumAnalyzer</span><span class="o">-&gt;</span><span class="n">GetPositionY</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 绘制峰的位置</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numberOfPeaksFound</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">stringstream</span><span class="w"> </span><span class="n">ss</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">peakPositionsX</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="n">TString</span><span class="w"> </span><span class="n">peakLabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">TLatex</span><span class="o">*</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TLatex</span><span class="p">(</span><span class="n">peakPositionsX</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">peakPositionsY</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">peakLabel</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">peakMap</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">Int_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">peakPositionsY</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="w"> </span><span class="n">peakPositionsX</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span><span class="w"></span>
+<span class="w">        </span><span class="n">text</span><span class="o">-&gt;</span><span class="n">SetTextFont</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">text</span><span class="o">-&gt;</span><span class="n">SetTextSize</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">text</span><span class="o">-&gt;</span><span class="n">SetTextAlign</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">text</span><span class="o">-&gt;</span><span class="n">SetTextAngle</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">text</span><span class="o">-&gt;</span><span class="n">SetTextColor</span><span class="p">(</span><span class="n">kRed</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">text</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 输出峰的位置并按计数排序</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">peakMap</span><span class="p">.</span><span class="n">rbegin</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">peakMap</span><span class="p">.</span><span class="n">rend</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// peak position, count</span>
+<span class="w">        </span><span class="n">peaks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">);</span><span class="w"> </span><span class="c1">// 按照计数由大到小填入</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 清理</span>
+<span class="w">    </span><span class="n">peakMap</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="c1">//     inputFile-&gt;Close();</span>
+<span class="c1">//     delete spectrumAnalyzer;</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E8%8E%B7%E5%BE%97%E5%B3%B0%E8%AE%A1%E6%95%B0%E7%A8%8B%E5%BA%8F">&#33719;&#24471;&#23792;&#35745;&#25968;&#31243;&#24207;<a class="anchor-link" href="#%E8%8E%B7%E5%BE%97%E5%B3%B0%E8%AE%A1%E6%95%B0%E7%A8%8B%E5%BA%8F">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>运行命令root -l peak_counts.c"(\"2503run$run_number.root\", "310", "330", "5", "17751")"  # peak range, sigma, measure time</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">peak_counts</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">lowerBound</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">upperBound</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.5</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">measure_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span>
+<span class="w">    </span><span class="c1">// 定义输入文件夹路径</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">inputFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"HPGeroot/"</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 构建完整的输入文件路径</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">inputFilePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFolder</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 打开 ROOT 文件</span>
+<span class="w">    </span><span class="n">TFile</span><span class="o">*</span><span class="w"> </span><span class="n">ipf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TFile</span><span class="p">(</span><span class="n">inputFilePath</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="s">"READ"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">ipf</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">IsZombie</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: Could not open file "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">inputFilePath</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 处理文件名：去掉扩展名和前四位</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">lastDot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">.</span><span class="n">find_last_of</span><span class="p">(</span><span class="sc">'.'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找到扩展名的位置</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lastDot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: File name has no extension."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">baseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">lastDot</span><span class="p">);</span><span class="w"> </span><span class="c1">// 去掉扩展名</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baseName</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">baseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseName</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// 去掉前四位</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: File name is too short to remove the first 4 characters."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 输出结果到文件</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">outputFileName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"peak_counts.txt"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 输出文件名</span>
+<span class="w">    </span><span class="n">ofstream</span><span class="w"> </span><span class="n">outFile</span><span class="p">(</span><span class="n">outputFileName</span><span class="p">,</span><span class="w"> </span><span class="n">ios</span><span class="o">::</span><span class="n">app</span><span class="p">);</span><span class="w"> </span><span class="c1">// 打开文件</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">outFile</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: Could not open output file "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">outputFileName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 生成直方图名称</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"h"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">baseName</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"    "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 获取 TH1F 直方图</span>
+<span class="w">    </span><span class="n">TH1F</span><span class="o">*</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">TH1F</span><span class="o">*</span><span class="p">)</span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">(</span><span class="n">histName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: Could not find TH1F histogram with name "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" in the file."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 定义高斯加一次函数的拟合函数</span>
+<span class="w">    </span><span class="n">TF1</span><span class="o">*</span><span class="w"> </span><span class="n">fitFunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TF1</span><span class="p">(</span><span class="s">"fitFunc"</span><span class="p">,</span><span class="w"> </span><span class="s">"[0]*exp(-0.5*((x-[1])/[2])^2) + [3] + [4]*x"</span><span class="p">,</span><span class="w"> </span><span class="n">lowerBound</span><span class="p">,</span><span class="w"> </span><span class="n">upperBound</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">fitFunc</span><span class="o">-&gt;</span><span class="n">SetParNames</span><span class="p">(</span><span class="s">"Constant"</span><span class="p">,</span><span class="w"> </span><span class="s">"Mean"</span><span class="p">,</span><span class="w"> </span><span class="s">"Sigma"</span><span class="p">,</span><span class="w"> </span><span class="s">"BackgroundConst"</span><span class="p">,</span><span class="w"> </span><span class="s">"BackgroundSlope"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 设置初始参数</span>
+<span class="w">    </span><span class="n">fitFunc</span><span class="o">-&gt;</span><span class="n">SetParameters</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">lowerBound</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">upperBound</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">upperBound</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lowerBound</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 在指定范围内进行拟合</span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">Fit</span><span class="p">(</span><span class="n">fitFunc</span><span class="p">,</span><span class="w"> </span><span class="s">"R"</span><span class="p">,</span><span class="w"> </span><span class="s">""</span><span class="p">,</span><span class="w"> </span><span class="n">lowerBound</span><span class="p">,</span><span class="w"> </span><span class="n">upperBound</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 获取拟合结果</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">constant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fitFunc</span><span class="o">-&gt;</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 高斯幅值</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fitFunc</span><span class="o">-&gt;</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">     </span><span class="c1">// 高斯均值</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sigma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fitFunc</span><span class="o">-&gt;</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w">    </span><span class="c1">// 高斯标准差</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">bgConst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fitFunc</span><span class="o">-&gt;</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">  </span><span class="c1">// 背景常数项</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">bgSlope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fitFunc</span><span class="o">-&gt;</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// 背景斜率</span>
+
+<span class="w">    </span><span class="c1">// 计算不同区域的计数</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">lowerBound1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigma</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">upperBound1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigma</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">lowerBound2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigma</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">upperBound2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigma</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bin1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">FindBin</span><span class="p">(</span><span class="n">lowerBound1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bin2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">FindBin</span><span class="p">(</span><span class="n">upperBound1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bin3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">FindBin</span><span class="p">(</span><span class="n">lowerBound2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bin4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">FindBin</span><span class="p">(</span><span class="n">upperBound2</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">count1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">Integral</span><span class="p">(</span><span class="n">bin1</span><span class="p">,</span><span class="w"> </span><span class="n">bin2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 正负3.5sigma区域的计数</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">count2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">Integral</span><span class="p">(</span><span class="n">bin3</span><span class="p">,</span><span class="w"> </span><span class="n">bin1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 负7sigma到负3.5sigma区域的计数</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">count3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">Integral</span><span class="p">(</span><span class="n">bin2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">bin4</span><span class="p">);</span><span class="w"> </span><span class="c1">// 正3.5sigma到正7sigma区域的计数</span>
+
+<span class="w">    </span><span class="c1">// 计算三者相减的结果</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">net_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">count2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">count3</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 绘制直方图并标记区域</span>
+<span class="w">    </span><span class="n">TCanvas</span><span class="o">*</span><span class="w"> </span><span class="n">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TCanvas</span><span class="p">(</span><span class="s">"canvas"</span><span class="p">,</span><span class="w"> </span><span class="s">"Gaussian + Linear Fit and Regions"</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+<span class="w">     </span><span class="c1">// 设置横轴标题和单位</span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetTitle</span><span class="p">(</span><span class="s">"Energy [keV]"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">CenterTitle</span><span class="p">();</span><span class="w">  </span><span class="c1">// 横轴标题居中</span>
+
+<span class="w">    </span><span class="c1">// 设置纵轴标题</span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetTitle</span><span class="p">(</span><span class="s">"Counts"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">CenterTitle</span><span class="p">();</span><span class="w">  </span><span class="c1">// 纵轴标题居中</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 恢复直方图的原始范围</span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetRangeUser</span><span class="p">(</span><span class="n">lowerBound2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">upperBound2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 去掉统计框</span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">SetStats</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// 获取直方图的 Y 轴范围</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">yMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Y 轴最小值</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">yMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">GetMaximum</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.05</span><span class="p">;</span><span class="w"> </span><span class="c1">// Y 轴最大值</span>
+
+<span class="w">    </span><span class="c1">// 在 X 轴上标记 mean ± 1.5 * sigma 范围为红色</span>
+<span class="w">    </span><span class="n">TBox</span><span class="o">*</span><span class="w"> </span><span class="n">redBox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TBox</span><span class="p">(</span><span class="n">lowerBound1</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">upperBound1</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">redBox</span><span class="o">-&gt;</span><span class="n">SetFillColor</span><span class="p">(</span><span class="n">kRed</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">redBox</span><span class="o">-&gt;</span><span class="n">SetFillStyle</span><span class="p">(</span><span class="mi">3001</span><span class="p">);</span><span class="w"> </span><span class="c1">// 设置填充样式为透明</span>
+<span class="w">    </span><span class="n">redBox</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 在 X 轴上标记 mean - 3 * sigma 到 mean - 1.5 * sigma 范围为蓝色</span>
+<span class="w">    </span><span class="n">TBox</span><span class="o">*</span><span class="w"> </span><span class="n">Blue1Box</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TBox</span><span class="p">(</span><span class="n">lowerBound2</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">lowerBound1</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Blue1Box</span><span class="o">-&gt;</span><span class="n">SetFillColor</span><span class="p">(</span><span class="n">kBlue</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Blue1Box</span><span class="o">-&gt;</span><span class="n">SetFillStyle</span><span class="p">(</span><span class="mi">3001</span><span class="p">);</span><span class="w"> </span><span class="c1">// 设置填充样式为透明</span>
+<span class="w">    </span><span class="n">Blue1Box</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 在 X 轴上标记 mean + 1.5 * sigma 到 mean + 3 * sigma  范围为蓝色</span>
+<span class="w">    </span><span class="n">TBox</span><span class="o">*</span><span class="w"> </span><span class="n">Blue2Box</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TBox</span><span class="p">(</span><span class="n">upperBound1</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">upperBound2</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Blue2Box</span><span class="o">-&gt;</span><span class="n">SetFillColor</span><span class="p">(</span><span class="n">kBlue</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Blue2Box</span><span class="o">-&gt;</span><span class="n">SetFillStyle</span><span class="p">(</span><span class="mi">3001</span><span class="p">);</span><span class="w"> </span><span class="c1">// 设置填充样式为透明</span>
+<span class="w">    </span><span class="n">Blue2Box</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 在正负1.5sigma边界画红色竖线</span>
+<span class="w">    </span><span class="n">TLine</span><span class="o">*</span><span class="w"> </span><span class="n">lineRed1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TLine</span><span class="p">(</span><span class="n">lowerBound1</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">lowerBound1</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineRed1</span><span class="o">-&gt;</span><span class="n">SetLineColor</span><span class="p">(</span><span class="n">kRed</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineRed1</span><span class="o">-&gt;</span><span class="n">SetLineWidth</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineRed1</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">TLine</span><span class="o">*</span><span class="w"> </span><span class="n">lineRed2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TLine</span><span class="p">(</span><span class="n">upperBound1</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">upperBound1</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineRed2</span><span class="o">-&gt;</span><span class="n">SetLineColor</span><span class="p">(</span><span class="n">kRed</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineRed2</span><span class="o">-&gt;</span><span class="n">SetLineWidth</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineRed2</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 在正负3sigma边界画蓝色竖线</span>
+<span class="w">    </span><span class="n">TLine</span><span class="o">*</span><span class="w"> </span><span class="n">lineBlue1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TLine</span><span class="p">(</span><span class="n">lowerBound2</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">lowerBound2</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineBlue1</span><span class="o">-&gt;</span><span class="n">SetLineColor</span><span class="p">(</span><span class="n">kBlue</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineBlue1</span><span class="o">-&gt;</span><span class="n">SetLineWidth</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineBlue1</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">TLine</span><span class="o">*</span><span class="w"> </span><span class="n">lineBlue2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TLine</span><span class="p">(</span><span class="n">upperBound2</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">upperBound2</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineBlue2</span><span class="o">-&gt;</span><span class="n">SetLineColor</span><span class="p">(</span><span class="n">kBlue</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineBlue2</span><span class="o">-&gt;</span><span class="n">SetLineWidth</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">lineBlue2</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 输出结果</span>
+<span class="w">    </span><span class="c1">// cout &lt;&lt; "Fitted Gaussian Constant: " &lt;&lt; constant &lt;&lt; endl;</span>
+<span class="w">    </span><span class="c1">// cout &lt;&lt; "Fitted Gaussian Mean: " &lt;&lt; mean &lt;&lt; endl;</span>
+<span class="w">    </span><span class="c1">// cout &lt;&lt; "Fitted Gaussian Sigma: " &lt;&lt; sigma &lt;&lt; endl;</span>
+<span class="w">    </span><span class="c1">// cout &lt;&lt; "Fitted Background Constant: " &lt;&lt; bgConst &lt;&lt; endl;</span>
+<span class="w">    </span><span class="c1">// cout &lt;&lt; "Fitted Background Slope: " &lt;&lt; bgSlope &lt;&lt; endl;</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Count in mean +/- "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Count in mean - "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma to - "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma: "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Count in mean + "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma to + "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma: "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"The peaks "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="s">" net count is: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">net_count</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Fitted Gaussian Constant: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">constant</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Fitted Gaussian Mean: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Fitted Gaussian Sigma: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sigma</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Fitted Background Constant: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bgConst</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Fitted Background Slope: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bgSlope</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Count in mean +/- "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Count in mean - "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma to - "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Count in mean + "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma to + "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmaRange</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" sigma: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count3</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"The peaks "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" net count is: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">net_count</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">     </span><span class="c1">// 如果时间参数无效，跳过计算</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">measure_time</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">count_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">net_count</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">measure_time</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"The peaks "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" count rate is "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count_rate</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"The detection efficiency at peak "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" is "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count_rate</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">16533.79</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" % "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"The peaks "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" count rate is "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count_rate</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">outFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"The detection efficiency at peak "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" is "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count_rate</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">16533.79</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" % "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span>
+
+<span class="w">    </span><span class="c1">// canvas-&gt;Draw();</span>
+<span class="w">    </span><span class="c1">// // 保存画布</span>
+<span class="w">    </span><span class="c1">// canvas-&gt;SaveAs("gaussian_linear_fit_regions.png");</span>
+
+<span class="w">    </span><span class="c1">// 关闭文件</span>
+<span class="w">    </span><span class="c1">// ipf-&gt;Close();</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E7%94%BB%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%A8%8B%E5%BA%8F">&#30011;&#30452;&#26041;&#22270;&#31243;&#24207;<a class="anchor-link" href="#%E7%94%BB%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%A8%8B%E5%BA%8F">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw_roothis</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 定义输入文件夹路径</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">inputFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"HPGeroot/"</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 构建完整的输入文件路径</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">inputFilePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFolder</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 打开 ROOT 文件</span>
+<span class="w">    </span><span class="n">TFile</span><span class="o">*</span><span class="w"> </span><span class="n">ipf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TFile</span><span class="p">(</span><span class="n">inputFilePath</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="s">"READ"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">ipf</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">IsZombie</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: Could not open file "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">inputFilePath</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 处理文件名：去掉扩展名和前四位</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">lastDot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">.</span><span class="n">find_last_of</span><span class="p">(</span><span class="sc">'.'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找到扩展名的位置</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lastDot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: File name has no extension."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">baseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFileName</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">lastDot</span><span class="p">);</span><span class="w"> </span><span class="c1">// 去掉扩展名</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baseName</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">baseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseName</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// 去掉前四位</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: File name is too short to remove the first 4 characters."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 生成直方图名称</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"h"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">baseName</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 获取 TH1F 直方图</span>
+<span class="w">    </span><span class="n">TH1F</span><span class="o">*</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">TH1F</span><span class="o">*</span><span class="p">)</span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">(</span><span class="n">histName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Error: Could not find TH1F histogram with name "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">histName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" in the file."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ipf</span><span class="o">-&gt;</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">TCanvas</span><span class="o">*</span><span class="w"> </span><span class="n">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TCanvas</span><span class="p">(</span><span class="s">"canvas"</span><span class="p">,</span><span class="w"> </span><span class="s">"Canvas"</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 去掉统计框</span>
+<span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">SetStats</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">canvas</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">();</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E7%A8%8B%E5%BA%8F%E5%90%88%E9%9B%86%E5%BF%AB%E6%8D%B7%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC">&#31243;&#24207;&#21512;&#38598;&#24555;&#25463;&#36816;&#34892;shell&#33050;&#26412;<a class="anchor-link" href="#%E7%A8%8B%E5%BA%8F%E5%90%88%E9%9B%86%E5%BF%AB%E6%8D%B7%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="cp">#!/bin/sh</span>
+
+<span class="cp"># 循环运行号从 1 到 49</span>
+<span class="cp"># for run_number in $(seq 4 49); do</span>
+<span class="w">    </span>
+<span class="cp">#     echo "Processing run number: $run_number"</span>
+
+<span class="cp">#     root -l -q spe_to_root.c"(\"2503run$run_number.Spe\")"</span>
+<span class="cp"># done</span>
+
+<span class="w">    </span><span class="n">run_number</span><span class="o">=</span><span class="s">"48"</span><span class="w">  </span>
+
+<span class="w">    </span><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">spe_to_root</span><span class="p">.</span><span class="n">c</span><span class="s">"(</span><span class="se">\"</span><span class="s">2503run$run_number.Spe</span><span class="se">\"</span><span class="s">)"</span><span class="w"></span>
+
+<span class="w">    </span><span class="cp"># root -l Scale_par.c                                      #Obtain the scale coefficient</span>
+
+<span class="w">    </span><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="s">"scale_root.c(</span><span class="se">\"</span><span class="s">2503run$run_number.root</span><span class="se">\"</span><span class="s">)"</span><span class="w">     </span><span class="err">#</span><span class="n">Scaled</span><span class="w"> </span><span class="n">histogram</span><span class="w"></span>
+
+<span class="w">    </span><span class="cp"># root -l Draw_roothis.c"(\"2503run$run_number.root\")"    #Draw histogram</span>
+
+<span class="w">    </span><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="n">peaks_position</span><span class="p">.</span><span class="n">c</span><span class="s">"(</span><span class="se">\"</span><span class="s">2503run$run_number.root</span><span class="se">\"</span><span class="s">)"</span><span class="w">    </span><span class="err">#</span><span class="n">Check</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">peak</span><span class="w"> </span><span class="n">position</span><span class="w"></span>
+
+<span class="w">    </span><span class="cp"># root -l peak_counts.c"(\"2503run$run_number.root\", "310", "330", "5", "17751")"  # peak range, sigma, measure time</span>
 </pre></div>
 
      </div>
